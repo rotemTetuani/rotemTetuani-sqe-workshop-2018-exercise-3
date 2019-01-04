@@ -9,7 +9,8 @@
         "test:watch": "mocha-webpack --watch",
         "test": "mocha-webpack --webpack-config webpack.test.config.js --reporter=json",
         "coverage": "cross-env NODE_ENV=coverage nyc --reporter=json-summary npm run test",
-        "lint": "eslint -f json -o ./lint/eslint-report.json src"
+        "lint": "eslint -f json -o ./lint/eslint-report.json src",
+        "js2flowchart": "js2flowchart"
     },
     "nyc": {
         "include": [
@@ -21,8 +22,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "esgraph": "^0.3.0",
         "esprima": "^4.0.0",
-        "jquery": "^3.3.1"
+        "jquery": "^3.3.1",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0",
+        "static-eval": "^2.0.0",
+        "viz.js": "^2.1.2"
     },
     "devDependencies": {
         "cross-env": "^5.2.0",
